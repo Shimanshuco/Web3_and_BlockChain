@@ -1,6 +1,7 @@
 {
   "type": "module",
   "dependencies": {
-    "@solana/kit": "^5.0.0"
+    "@solana/kit": "^5.0.0",
+    "bs58": "^6.0.0"
   }
 }

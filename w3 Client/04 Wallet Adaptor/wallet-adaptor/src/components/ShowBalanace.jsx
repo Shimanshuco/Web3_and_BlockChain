@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useWallet } from "@solana/wallet-adapter-react";
 import { Connection } from "@solana/web3.js";
+import '../index.css'
 
 const ShowBalance = () => {
   const { publicKey } = useWallet();
@@ -18,11 +19,11 @@ const ShowBalance = () => {
   }, [publicKey]);
 
   return (
-    <div>
+    <div className="flex flex-row justify-center py-10 font-mono text-3xl">
       {publicKey ? (
-        <p>Balance: {balance !== null ? `${balance} SOL` : "Loading..."}</p>
+        <p className="text-center">Balance: {balance !== null ? `${balance} SOL` : "Loading..."}</p>
       ) : (
-        <p>Connect your wallet to see balance.</p>
+        <p className="text-center">Connect your wallet to see balance.</p>
       )}
     </div>
   );
